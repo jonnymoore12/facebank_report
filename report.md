@@ -209,6 +209,8 @@ facebank was used as a non-intrusive addition to registration at the event. As a
 
 During the afternoon at the event, we were able to setup facebank and a monitor for attendees to approach and engage with at their own pace. The app correctly identified, as a best estimate, ~85% of attendees who were all some combination of intrigued, surprised and excited by it.
 
+<img width="839" alt="screen shot 2017-06-16 at 15 43 13" src="https://user-images.githubusercontent.com/18581870/27231476-a2657c86-52aa-11e7-8890-8727e9483e35.png">
+
 ### FUTURE facebank
 facebank was merely a small tech prototype addition to Banking Redefined, but there is so much scope to build on this preliminary work and to potentially roll out something much more substantial to be used at other events or to be incorporated into heavier, non event-related applications.
 
