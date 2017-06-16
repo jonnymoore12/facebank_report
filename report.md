@@ -148,12 +148,12 @@ And what of 'George Clooney'? For uninvited guests, should facebank simply defau
 
 By analysing the Euclidean distances between a captured face and each known face (essentially the mathematically perceived resemblances between the two), specifically looking at the distances to the best few matches, we noticed that the distance from, say Keerthana face, as captured by the webcam to the stored headshot of Keerthana is not only the smallest, but, furthermore stands out from the crowd, so to speak (as you might expect).
 
-<img width="900" alt="screen shot 2017-06-16 at 15 32 36" src="https://user-images.githubusercontent.com/18581870/27231022-10c7b60a-52a9-11e7-8868-eba14c5d4bab.png">
-
+<img width="709" alt="screen shot 2017-06-16 at 15 32 36" src="https://user-images.githubusercontent.com/18581870/27231746-820a23be-52ab-11e7-9775-843d1016ccd2.png">
 
 If we omit the distance derived from a comparison with Keerthana's uploaded headshot (as if facebank has no knowledge of her), the remaining minimum distances are considerably more bunched up; significantly these results were not atypical.
 
-<img width="694" alt="nearest_neighbours2" src="https://user-images.githubusercontent.com/18581870/27178300-9fef18ca-51c1-11e7-84a2-e6f4a61a1453.png">
+<img width="709" alt="nearest_neighbours2" src="https://user-images.githubusercontent.com/18581870/27231771-a35882d6-52ab-11e7-9393-2a35a44eb874.png">
+
 Hence, if d2-d1 is above a particular threshold, the captured face bears a close enough resemblance to one of the known faces and we can determine that said face belongs to an invited attendee. Conversely, if d2-d1 is too small, we establish, with a fair degree of certainty, that we have an uninvited on our hands.
 
 Whilst this feature was exciting and largely successful, it came with two big caveats: No matter how we determined the d2-d1 threshold (normalized the sample data and factored in the standard deviation, etc.), the tradeoff was that in order to capture all or close to all uninvited guests, some invited guests would inevitably be incorrectly labelled as uninvited (there would be overlap between the two). Furthermore, with the extra computation going on, facebank additionally suffered significant performance issues, with the rendered output refreshing at a decidedly lower frame rate.
