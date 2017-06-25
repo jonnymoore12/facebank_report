@@ -145,7 +145,7 @@ With this in place, we experimented with various statistical methods of identify
 #### Who Invited You?
 And what of 'George Clooney'? For uninvited guests, should facebank simply default to the 'best available match' or could we program in the ability to confidently distinguish between 'known' and 'unknown' faces?
 
-By analysing the Euclidean distances between a captured face and each known face (essentially the mathematically perceived resemblances between the two), specifically looking at the distances to the best few matches, we noticed that the distance from, say Keerthana face, as captured by the webcam to the stored headshot of Keerthana is not only the smallest, but, furthermore stands out from the crowd, so to speak (as you might expect).
+By analysing the Euclidean distances between a captured face and each known face (essentially the mathematically perceived resemblances between the two), specifically looking at the distances to the best few matches, we noticed that the distance from, say Keerthana's face, as captured by the webcam to the stored headshot of Keerthana is not only the smallest, but, furthermore really stands out from the crowd, so to speak (as you might expect).
 
 <img width="709" alt="screen shot 2017-06-16 at 15 32 36" src="https://user-images.githubusercontent.com/18581870/27231746-820a23be-52ab-11e7-9775-843d1016ccd2.png">
 
@@ -154,7 +154,9 @@ If we omit the distance derived from a comparison with Keerthana's uploaded head
 <img width="709" alt="nearest_neighbours2" src="https://user-images.githubusercontent.com/18581870/27231771-a35882d6-52ab-11e7-9393-2a35a44eb874.png">
 Hence, if d2-d1 is above a particular threshold, the captured face bears a close enough resemblance to one of the known faces and we can determine that said face belongs to an invited attendee. Conversely, if d2-d1 is too small, we establish, with a fair degree of certainty, that we have an uninvited on our hands.
 
-Whilst this feature was exciting and largely successful, it came with two big caveats: No matter how we determined the d2-d1 threshold (normalized the sample data and factored in the standard deviation, etc.), the tradeoff was that in order to capture all or close to all uninvited guests, some invited guests would inevitably be incorrectly labelled as uninvited (there would be overlap between the two). Furthermore, with the extra computation going on, facebank additionally suffered significant performance issues, with the rendered output refreshing at a decidedly lower frame rate.
+Whilst this feature was exciting and largely successful, it came with two big caveats: No matter how we determined the d2-d1 threshold, the tradeoff was that in order to capture all or close to all uninvited guests, some invited guests would inevitably be incorrectly labelled as uninvited (there would be overlap between the two). We should note that the system we trialled essentially only crudely identified outliers. The use of a more sophisticated, algorithm, devised with more statistical cunning would definitely have the scope to reduce or even completely eradicate said overlap.
+
+ Furthermore, with the extra computation going on, facebank additionally suffered significant performance issues, with the rendered output refreshing at a decidedly lower frame rate.
 
 Even our experiments into remembering faces, making decisions and sticking to identifications, hit the performance of the app with no perceived benefit to accuracy. Sometimes captured faces bear greater resemblance (crucially, consistently so) to uploaded images of others than to their own uploaded images, no matter how you rearrange the numbers. Consequently, most of this experimental code, as fun as it was to cook up, was not incorporated into our final app.
 
@@ -203,7 +205,7 @@ Thanks also to Hernan Carrizo and Caitlin Gulliford for their help here.
 
 ### Banking Redefined
 ![banking_hall](https://user-images.githubusercontent.com/18581870/27137709-7e274524-5116-11e7-9da3-475e0c4bf7ba.jpeg)
-facebank was used as a non-intrusive addition to registration at the event. As attendees approached a registration desk to collect pre-printed name badges (with the monitors aimed at us, rather than the attendees themselves), we were able to welcome them by their names before they announced them themselves in some cases (eliciting surprised reactions). This, however, was often not possible as many attendees would state their own names as they arrived, denying us the opportunity.
+facebank was used as a non-intrusive addition to registration at the event. As attendees approached a registration desk to collect pre-printed name badges (with the monitors aimed at us, rather than the attendees themselves), we were able to welcome them by their names before they announced them themselves in some cases (eliciting surprised reactions). This, however, was often not possible as many attendees would state their own names as they arrived, denying us the opportunity. So as not to slow down registration in any way, our cameras were positioned to the side of the name badges and captured attendees at a slight angle; with a more committed use of this technology, we could have captured more people head on, which would certainly have been more effective.
 
 During the afternoon at the event, we were able to setup facebank and a monitor for attendees to approach and engage with at their own pace. The app correctly identified, as a best estimate, ~85% of attendees who were all some combination of intrigued, surprised and excited by it.
 
